@@ -1,6 +1,6 @@
 //Final Keyword
 //This keyword
-
+//Static
 
 
 public class Main {
@@ -16,6 +16,10 @@ System.out.println(s1.getRollNumber());
         System.out.println(s3);
         s3.Print();
 //Ouput of This and s1 will be same
+        
+         System.out.println(s1.numsStudent);
+        System.out.println(s2.numsStudent);
+        System.out.println(Student.numsStudent);//Better way to call
 
 
 }
@@ -26,6 +30,11 @@ public class Student {
     //Final Data Member Can be initialised when declared
     //Can be declared initially or only in Constructor kyuki declaration ke waqt he constructor invoke hota hai
     private final int rollNumber=100;
+    
+     //For one data to be shared among all not separate
+     static int numsStudent; //To get no of objects created,Once all objects are created everyone should return only one value so separate numsStudent for each class is not required
+                             //Ek he numsStudent for all Classes
+                            //Should make private so that value should not change
 
     public Student(){
         name="";
@@ -37,6 +46,7 @@ public class Student {
         System.out.println(this);
         this.name = name; //Now this is the object jisko ham construct kar rahe hai
                           //Use this to get object which us called
+        numsStudent++;
     }
 
     public int getRollNumber(){
@@ -66,4 +76,7 @@ Pranav 100
 Student@6f496d9f
 Student@6f496d9f
 Ankush 100
+2
+2
+2
      */
